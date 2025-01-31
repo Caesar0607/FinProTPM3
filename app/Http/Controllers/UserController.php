@@ -8,6 +8,8 @@ use App\Models\Members;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\Models\admin;
+use Laravel\Sanctum\HasApiTokens;
 
 class UserController extends Controller
 {
@@ -107,24 +109,116 @@ class UserController extends Controller
         if ($input->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => $input->errors() 
+                'message' => $input->errors()
             ], 422);
         }
 
         $group = Groups::where('group_id', $user->group_id)->firstOrFail();
-        
+
         // cv handling
         $cv = $request->file('cv');
         $pathCV = $cv->move('uploads', $cv->getClientOriginalName());
-        
+
         // id_card handling
-        $id_card = $request->file('id_card');
-        $pathIdCard = $id_card->move('uploads', $id_card->getClientOriginalName());
-        
+        $group_id_card = $request->file('id_card');
+        $pathIdCard = $group_id_card->move('uploads', $group_id_card->getClientOriginalName());
+
         $leader = Leaders::create($input->validated());
         $group->update([
             'leader_id' => $leader->leader_id
         ]);
         return response()->json(['message' => 'Leader has been added to your team'], 200);
+    }
+
+
+    //userdashboard
+    public function userDashboard(){
+        $group=Groups::all();
+        return response()->json(['success' => true, 'Group' => $group], 200);
+    }
+
+    public function adminLogin(Request $request){
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+
+        if (!Auth::guard('admin')->attempt($request->only('email', 'password'))) {
+            return response()->json(['message' => 'Invalid credentials'], 401);
+        }
+
+        $admin = Auth::guard('admin')->user();
+        $token = $admin->createToken('authAdminToken')->accessToken;
+
+        return response()->json([
+            'message' => 'Admin login successful',
+            'access_token' => $token,
+        ], 200);
+    }
+
+    //adminview
+    public function adminView(){
+        $group=Groups::all();
+        return response()->json(['success' => true, 'Group' => $group], 200);
+    }
+
+
+
+        //Update Group
+    public function save(Request $request){
+        $Grouppy = new Groups;
+
+        try{
+            $Grouppy->binusian = $request->binusian;
+            $Grouppy->date_created = $request->date_created;
+            $Grouppy->password = $request->password;
+            $Grouppy->leader_id = $request->leader_id;
+            $Grouppy->group_name = $request->group_name;
+            $Grouppy->save();
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()],500);
+        }
+        return response()->json([
+            'success'=>true,
+            'group_data'=>$Grouppy
+        ]);
+    }
+
+    // Update Group
+    public function groupUpdate($group_id, Request $request) {
+        $groupToUpdate = Groups::find($group_id);
+
+        if (!$groupToUpdate) {
+            return response()->json(['error' => 'Group not found'], 404);
+        }
+
+        $groupToUpdate->binusian = $request->binusian;
+        $groupToUpdate->date_created = $request->date_created;
+        $groupToUpdate->leader_id = $request->leader_id;
+        $groupToUpdate->group_name = $request->group_name;
+
+        $groupToUpdate->save();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Group has been updated successfully',
+            'new_group_data' => $groupToUpdate
+        ], 200);
+    }
+
+    // Delete Group
+    public function groupDelete($group_id) {
+        $group = Groups::find($group_id);
+
+        if (!$group) {
+            return response()->json(['error' => 'Group not found'], 404);
+        }
+
+        $group->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Group has been deleted successfully'
+        ], 200);
     }
 }
