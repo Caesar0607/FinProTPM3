@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">J</div>
+        <div class="welcome">
+            <p class="welcome-title">Welcome Back!</p>
+            <p class="welcome-name">John Doe</p>
+        </div>
+        <ul class="menu">
+            <li class="active">Team Data</li>
+            <li id="logout-button">Logout</li>
+        </ul>
+        <img src="2orguser.png" alt="Illustration" class="illustration">
+    </aside>
+    <section class="content">
+        <h1>Team Data</h1>
+        <div class="container-content">
+            <div class="form-content">
+                <div class="form-group">
+                    <label for="team-name">Team Name</label>
+                    <div class="team-name-container">
+                        <input type="text" id="team-name" value="Team Jamey Does" readonly>
+                        <img src="edit.png" alt="Edit" id="edit-team-name" class="pencil-icon">
+                    </div>
+                    <button id="view-member-button" class="view-button"><img src="eyeview.png" alt="View"></button>
+                </div>
+                <h2>Leader Data</h2>
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" value="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="birth-place">Place and Date of Birth</label>
+                    <input type="text" id="birth-place" value="Jakarta, 25 December 1990">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="johndoe12@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input type="text" id="whatsapp" value="081242389221">
+                </div>
+                <div class="form-group">
+                    <label for="line-id">ID Line</label>
+                    <input type="text" id="line-id" value="johndoe">
+                </div>
+                <div class="form-group">
+                    <label for="github-id">Github / Gitlab ID</label>
+                    <input type="text" id="github-id" value="iamjohndoe">
+                </div>
+                <div class="buttons">
+                    <button id="view-cv-button">View CV</button>
+                    <button id="view-flazz-button">View Flazz Card</button>
+                </div>
+                <p class="need-help">Need Help? Contact: Jane Doe (08123424234)</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <h3>Hackathon 7.0 <br> Open Registration</h3>
+                    <p>Today</p>
+                </div>
+                <div class="timeline-item passed">
+                    <h3>Hackathon 7.0 <br> Closed Registration</h3>
+                    <p>1 January 2025</p>
+                </div>
+                <div class="timeline-item passed">
+                    <h3>Hackathon 7.0 <br> Technical Meeting</h3>
+                    <p>28 Febuary 2025</p>
+                    <p class="info">The meeting will be held Online, <br> The link to the meeting will be updated here</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Hackathon 7.0 <br> Competition Day</h3>
+                    <p>4 March 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="logout-modal" class="modal">
+        <div class="modal-content">
+            <h2>Are you sure you want to logout!</h2>
+            <p>Once you logout you need to re-enter your team name and password again</p>
+            <div class="button-container">
+                <button id="cancel-logout">Cancel</button>
+                <button id="confirm-logout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-cv">×</span>
+            <h2>Your CV</h2>
+            <h3>John Doe</h3>
+            <h3>CV</h3>
+            <p>Placeholder text for CV content. You can replace this with an image or actual CV content.</p>
+        </div>
+    </div>
+
+    <div id="view-flazz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-flazz">×</span>
+            <h2>Your Flazz Card</h2>
+            <h3>Flazz Card/ID</h3>
+            <p>Placeholder text for Flazz Card content. You can replace this with an image or actual Flazz Card content.</p>
+        </div>
+    </div>
+    <div id="notification" class="notification">
+        Team Name updated!
+    </div>
+
+    <div id="view-member-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-member">×</span>
+            <h2 id="member-modal-title">Member 1</h2>
+            <div class="member-navigation">
+                <button id="prev-member">
+                    < </button>
+                        <button id="next-member">></button>
+            </div>
+            <div class="form-group">
+                <label for="member-name">Full name</label>
+                <div class="edit-container">
+                     <input type="text" id="member-name" value="Abraham Lincoln" readonly>
+                     <img src="edit.png" alt="Edit" id="edit-member-name" class="pencil-icon">
+                </div>
+                <small class="error-message" id="error-member-name"></small>
+            </div>
+            <div class="form-group">
+                <label for="member-birth-place">Place of Birth</label>
+                <div class="edit-container">
+                    <input type="text" id="member-birth-place" value="Jakarta" readonly>
+                    <img src="edit.png" alt="Edit" id="edit-member-birth-place" class="pencil-icon">
+                </div>
+                <small class="error-message" id="error-member-birth-place"></small>
+            </div>
+            <div class="form-group">
+                <label for="member-birth-date">Date of Birth</label>
+                <div class="edit-container">
+                    <input type="text" id="member-birth-date" value="10 August 1920" readonly>
+                    <img src="uis_calender.png" alt="Edit" id="edit-member-birth-date" class="pencil-icon">
+                </div>
+                
+                <input type="file" id="member-cv-file" style="display: none;" accept=".pdf,.doc,.docx">
+                <small class="error-message" id="error-member-birth-date"></small>
+            </div>
+            <div class="form-group">
+                 <label for="member-cv-file">Upload CV</label>
+                <div class="upload-file-container">
+                    <input type="text" id="member-cv-filename" placeholder="No file chosen" readonly>
+                    <label for="member-cv-file" class="custom-file-upload">
+                       <span>Attach file</span>
+                    </label>
+                </div>
+                <small class="error-message" id="error-member-cv"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="member-flazz-file">Upload Flazz Card</label>
+                 <input type="file" id="member-flazz-file" style="display: none;" accept=".pdf,.doc,.docx">
+                <div class="upload-file-container">
+                    <input type="text" id="member-flazz-filename" placeholder="No file chosen" readonly>
+                    <label for="member-flazz-file" class="custom-file-upload">
+                        <span>Attach file</span>
+                    </label>
+                </div>
+                 <small class="error-message" id="error-member-flazz"></small>
+             </div>
+             <div id="calendar" class="calendar">
+                <div class="calendar-header">
+                    <div class="calendar-navigation">
+                        <span id="calendar-prev" class="material-symbols-outlined"><</span>
+                    </div>
+                  <p class="current-date"></p>
+                  <div class="calendar-navigation">
+                    <span id="calendar-next" class="material-symbols-outlined">></span>
+                  </div>
+                </div>
+                <ul class="weeks">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                </ul>
+                <ul class="days"></ul>
+              </div>
+            <div class="button-container">
+                <button id="view-member-cv">View CV</button>
+                <button id="view-member-flazz">View Flazz Card</button>
+                <button id="save-member-data">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-member-cv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-member-cv">×</span>
+            <h2 id="member-cv-modal-title">Member 1 CV</h2>
+            <h3 id="member-cv-name">Abraham Lincoln</h3>
+            <h3 id = "member-cv-title">CV</h3>
+            <p>Placeholder text for Member CV content.</p>
+        </div>
+    </div>
+
+    <div id="view-member-flazz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-member-flazz">×</span>
+            <h2 id="member-flazz-modal-title">Member 1 Flazz Card</h2>
+            <h3 id="member-flazz-title">Flazz Card</h3>
+            <p>Placeholder text for Member Flazz Card content.</p>
+        </div>
+    </div>
+
+    <div id="success-notification" class="notification" style="background-color: #339538;">
+        Member <span id="success-member-number">1</span> Data Saved!
+    </div>
+    <div id="error-notification" class="notification" style="background-color: #d90429;">
+        Please fill all the required fields!
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="user-info">
+                <div class="user-icon">J</div>
+                <p>Welcome Back!</p>
+                <h2>Jane Doe</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#" id="team-data-link">Team Data</a></li>
+                <li><a href="#" id="logout-button">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search" id="search-input">
+                <img src="search.png" alt="Search" class="search-icon">
+                <div class="filter-options" id="filter-options">
+                    <div data-filter="asc">Name (A-Z)</div>
+                    <div data-filter="desc">Name (Z-A)</div>
+                    <div data-filter="newest">Newest</div>
+                </div>
+                <img src="filter.png" alt="Filter" class="filter-icon" id="filter-button">
+            </div>
+            <div class="team-list">
+                <p>Showing a total of 87 teams</p>
+                <table id="team-table">
+                    <tbody>
+                        <tr>
+                            <td>Team Jamey Does</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team Jamey Does">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team Jamey Does">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team Jamey Does">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team Dinomagma</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team Dinomagma">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team Dinomagma">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team Dinomagma">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team KINOY</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team KINOY">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team KINOY">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team KINOY">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team HawaiiGamer</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team HawaiiGamer">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team HawaiiGamer">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team HawaiiGamer">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team PembantaiHackathon</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team PembantaiHackathon">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team PembantaiHackathon">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team PembantaiHackathon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team DibantaiHackathon</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team DibantaiHackathon">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team DibantaiHackathon">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team DibantaiHackathon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team N-Sum Dimension</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team N-Sum Dimension">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team N-Sum Dimension">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team N-Sum Dimension">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team GAMAC</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team GAMAC">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team GAMAC">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team GAMAC">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team minecrafter</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team minecrafter">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team minecrafter">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team minecrafter">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Team MieAyamSedapEnakRasanya</td>
+                            <td>
+                                <img src="view.png" alt="View" class="icon view-icon" data-team="Team MieAyamSedapEnakRasanya">
+                                <img src="pencil.png" alt="Edit" class="icon edit-icon" data-team="Team MieAyamSedapEnakRasanya">
+                                <img src="trash.png" alt="Delete" class="icon delete-icon" data-team="Team MieAyamSedapEnakRasanya">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <span><</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>10</span>
+                    <span>></span>
+                </div>
+            </div>
+            <div class="team-details" id="team-details">
+                <h3 id="team-name"></h3>
+                <div class="info-item">
+                    <p>Team Leader</p>
+                    <p id="team-leader"></p>
+                </div>
+                <div class="info-item">
+                  <p>Member 1</p>
+                  <p id="member-1"></p>
+                </div>
+                <div class="info-item">
+                  <p>Member 2</p>
+                  <p id="member-2"></p>
+                </div>
+                <div class="info-item">
+                    <p>Member 3</p>
+                    <p id="member-3"></p>
+                </div>
+                <div class="info-item">
+                    <p>Date Created</p>
+                    <p id="date-created"></p>
+                </div>
+            </div>
+            <div class="edit-panel" id="edit-panel">
+                <h3 id="edit-team-name"></h3>
+                <div class="input-group">
+                  <label for="edit-team-leader">Team Leader</label>
+                  <input type="text" id="edit-team-leader">
+                </div>
+                <div class="input-group">
+                  <label for="edit-place-of-birth">Place of Birth</label>
+                  <input type="text" id="edit-place-of-birth">
+                </div>
+                <div class="input-group">
+                  <label for="edit-date-of-birth">Date of Birth</label>
+                  <input type="date" id="edit-date-of-birth">
+                </div>
+                <div class="input-group">
+                  <label for="edit-email-address">Email Address</label>
+                  <input type="email" id="edit-email-address">
+                </div>
+                <div class="input-group">
+                  <label for="edit-whatsapp-number">WhatsApp Number</label>
+                  <input type="tel" id="edit-whatsapp-number">
+                </div>
+                <div class="input-group">
+                  <label for="edit-line-id">LINE ID</label>
+                  <input type="text" id="edit-line-id">
+                </div>
+                <div class="input-group">
+                  <label for="edit-github-id">Github/Gitlab ID</label>
+                  <input type="text" id="edit-github-id">
+                </div>
+                <button id="save-button">Save Changes</button>
+              </div>
+              <div id="notification" class="notification">
+                <p id="notification-message"></p>
+              </div>
+            <div id="logout-confirmation" class="confirmation-dialog">
+                <div class="dialog-content">
+                    <h3>Are you sure?</h3>
+                    <p>you are about to be redirected to the login page</p>
+                    <div class="button-group">
+                        <button id="cancel-logout" class="cancel-button">Cancel</button>
+                        <button id="confirm-logout" class="confirm-button">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <div id="delete-confirmation" class="confirmation-dialog">
+                <div class="dialog-content">
+                    <h3>Are you sure?</h3>
+                    <p>Once deleted, you will not be able to recover this data</p>
+                    <div class="button-group">
+                        <button id="cancel-delete" class="cancel-button">Cancel</button>
+                        <button id="confirm-delete" class="confirm-button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
