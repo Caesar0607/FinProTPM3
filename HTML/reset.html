@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password | TechnoScape</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper"></div>
+        <div class="below-upper"></div>
+        <div class="middle"></div>
+        <div class="form-container">
+            <span class="reset-header"></span>
+            <form class="form-content">
+                <h1>Create new password</h1>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="">
+                        <img src="../LoginRegisAsset/Icons - PNG/mdi_eye.png" class="eye-icon" alt="">
+                        <span class="error-message">
+                            *must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" placeholder="">
+                        <img src="../LoginRegisAsset/Icons - PNG/mdi_eye.png" class="eye-icon" alt="">
+                        <span class="error-message">
+                            *must be identical
+                        </span>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="Reset Password" class="reset-btn">Reset password</button>
+                </div>
+                <div class="sign-up">
+                    <p>Don't have an account?</p>
+                    <a href="../HTML/register.html" class="sign-up">Sign Up</a>
+                </div>
+            </form>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+<script src="../JS/reset.js" defer></script>
+</html>
