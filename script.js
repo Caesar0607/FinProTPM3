@@ -95,7 +95,7 @@ cancelLogoutButton.addEventListener('click', () => {
 
 confirmLogoutButton.addEventListener('click', () => {
    
-    alert('You have been logged out!'); 
+    window.location.href = '/Landing Page/LandingPage.html#hero'; 
 });
 
 viewCVButton.addEventListener('click', () => {
