@@ -22,4 +22,3 @@ Route::get('/admin',[UserController::class,'adminView'])->name('AdminView');
 Route::post('/admin-login',[UserController::class,'adminLogin'])->name('AdminLogin');
 //user dash
 Route::get('/user-dashboard',[UserController::class,'userDashboard'])->name('UserDashboard');
-Route::get('')
