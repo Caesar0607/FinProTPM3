@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap");:root{
+    --white:#FFFFFF;
+    --red:#E07A5F;
+    --yellow:#F1ED94;
+    --blue:#5CAEF9;
+    --lightblue:#B2D4F3;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    font-weight: 400; 
+    font-style: normal;
+    src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJA.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins-Regular';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.upper {
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.below-upper{
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.middle {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+}
+
+.form-container {
+    position: absolute;
+    top: 14.5%; /* Adjust to position between middle and bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    /* width: 100%; */
+    /* max-width: 35%; */
+    box-shadow: 13px 13px 0px rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+.reset-header{
+    background-color: var(--blue);
+    display: flex;
+    width: auto;
+    height: 40px;
+    outline: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    gap: 1rem;
+}
+
+.form-content h1, .form-content p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-content h1 {
+    font-family: 'Poppins-Regular';
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+input:user-invalid + .error-message {
+    visibility: visible;
+    /* opacity: 100%; */
+}
+
+.error-message {
+    font-size: 0.9rem;
+    color: red;
+    visibility: hidden;
+    /* opacity: 0; */
+    transition: opacity 0.2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.3rem;
+}
+
+.form-group label {
+    font-family: 'Poppins-Regular';
+    font-weight: 600;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #000000;
+    font-size: 1rem;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.eye-icon{
+    position: absolute;
+    right: 3%;
+    height: 70%;
+    width: auto;
+    cursor: pointer;
+}
+
+.eye-icon:hover{
+    opacity: 70%;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.password-container .toggle-password {
+    cursor: pointer;
+    padding-left: 0.5rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.reset-btn {
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-family: 'Poppins-Regular';
+    font-weight: 700;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    padding: 10px;
+    width: 100%;
+    opacity: 80%;
+}
+
+.reset-btn:hover {
+    opacity: 100%;
+}
+
+.sign-up {
+    font-family: 'Poppins Regular';
+    font-size: 13px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.sign-up p {
+    font-family: 'Poppins Regular';
+    font-weight: 400;
+}
+
+.sign-up a {
+    font-family: 'Poppins Regular';
+    font-weight: 600;
+    background-color: transparent;
+    color: #000000;
+}
+
+.sign-up a:hover {
+    opacity: 50%;
+}
+
+.bottom {
+    background-color: var(--yellow);
+    justify-content: center;
+    align-items: center;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
