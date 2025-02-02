@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Technoscape</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upper"></div>
+        <div class="middle"></div>
+        <div class="form-container">
+            <span class="register-header">
+                <p>Team Info</p>
+                <img id="team-info" src="../LoginRegisAsset/Icons - PNG/Frame 6.png" alt="">
+                <p>Leader's Info</p>
+                <img id="leader-info" src="../LoginRegisAsset/Icons - PNG/Frame 6.png" alt="">
+                <p>Contact Information</p>
+                <img id="contact-info" src="../LoginRegisAsset/Icons - PNG/Frame 6.png" alt="">
+                <p>Upload</p>
+            </span>
+            <form class="form-content">
+                <h1>Let’s Jump Right in!</h1>
+                <div class="main-form">
+                    <div class="left-form">
+                        <div class="form-group">
+                            <label for="team-name">Team Name</label>
+                            <input type="text" id="team-name" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Create Password</label>
+                            <div class="password-container">
+                                <input type="password" id="password" placeholder="">
+                                <img src="../LoginRegisAsset/Icons - PNG/mdi_eye.png" class="eye-icon" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-form">
+                        <div class="form-group">
+                            <label for="binusian">Binusian?</label>
+                            <select id="binusian">
+                                <option class="hidden_option" value="" disabled selected>Choose here</option>
+                                <option value="yes">Binusian</option>
+                                <option value="no">Non-Binusian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <div class="password-container">
+                                <input type="password" id="confirm-password" placeholder="">
+                                <img src="../LoginRegisAsset/Icons - PNG/mdi_eye.png" class="eye-icon" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-actions">
+                    <button type="button" class="back-btn">Back</button>
+                    <button type="submit" class="next-btn">Next</button>
+                </div>
+                <div class="have-account">
+                    <a href="../HTML/login.html">Already have an account?</a>
+                </div>
+                
+            </form>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    
+</body>
+</html>
