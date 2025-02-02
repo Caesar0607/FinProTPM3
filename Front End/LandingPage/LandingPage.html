@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon Event</title>
+    <link rel="stylesheet" href="styleLandingPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- nav bar-->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="/AssetLanding/Mascot.png" alt="Hackathon Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link" data-target="hero">Home</a></li>
+          <li>
+            <a href="#" class="nav-link" data-target="prizes"
+              >Champion Prizes</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-target="mentors-jurys"
+              >Mentor & Jury</a
+            >
+          </li>
+          <li><a href="#" class="nav-link" data-target="about">About</a></li>
+          <li><a href="#" class="nav-link" data-target="faq">FAQ</a></li>
+          <li>
+            <a href="#" class="nav-link" data-target="timeline">Timeline</a>
+          </li>
+          <li><a href="/HTML/login.html" class="login-button">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero-->
+    <header id="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>HACKATHON 7.0</h1>
+          <p>
+            Bridging the Digital Divide: Building Solutions for a Better World
+          </p>
+          <p id="tanggal">Juni 2025 - Juli 2025</p>
+          <a href="/Login Regist/HTML/login.html" class="register-button"
+            >Register Here</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- categories + Mentor juri-->
+    <section id="categories">
+      <div class="categories-container">
+        <div class="category-shape">
+          <span class="category-label">Creative</span>
+        </div>
+        <div class="category-shape">
+          <span class="category-label">Design</span>
+        </div>
+        <div class="category-shape">
+          <span class="category-label">Hack</span>
+        </div>
+        <div class="category-shape">
+          <span class="category-label">Tech</span>
+        </div>
+        <div class="category-shape">
+          <span class="category-label">Innovation</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentors-jurys">
+      <div class="mentors-section">
+        <h2 class="section-title">Mentors</h2>
+        <div class="mentors-container">
+          <button class="arrow-button left-arrow" onclick="changeMentor(-1)">
+            ❮
+          </button>
+          <div class="mentor-card" id="left-mentor-card">
+            <img
+              src="/AssetLanding/Mentor/Tom1.png"
+              alt="Left Mentor"
+              id="left-mentor-image"
+              class="side-image"
+            />
+            <h3 id="left-mentor-name"></h3>
+            <p id="left-mentor-specialty"></p>
+          </div>
+          <div class="mentor-card" id="main-mentor-card">
+            <img
+              src="/AssetLanding/Mentor/Tom2.png"
+              alt="Mentor 1"
+              id="mentor-image"
+              class="main-image"
+            />
+            <h3 id="mentor-name">Mentor 1</h3>
+            <p id="mentor-specialty">Specialty 1</p>
+          </div>
+          <div class="mentor-card" id="right-mentor-card">
+            <img
+              src="/AssetLanding/Mentor/Tom3.png"
+              alt="Right Mentor"
+              id="right-mentor-image"
+              class="side-image"
+            />
+            <h3 id="right-mentor-name"></h3>
+            <p id="right-mentor-specialty"></p>
+          </div>
+          <button class="arrow-button right-arrow" onclick="changeMentor(1)">
+            ❯
+          </button>
+        </div>
+      </div>
+
+      <h2 class="section-title">Juries</h2>
+      <div class="juries-container">
+        <div class="jury-card">
+          <div class="image-container">
+            <img src="/AssetLanding/Jury/1.jpg" alt="Jury 1" />
+          </div>
+          <h3>MeongFish</h3>
+          <p>CEO E-Ikan</p>
+        </div>
+        <div class="jury-card">
+          <div class="image-container">
+            <img src="/AssetLanding/Jury/2.jpg" alt="Jury 2" />
+          </div>
+          <h3>MeongJas</h3>
+          <p>Manager RnD MeongFish</p>
+        </div>
+        <div class="jury-card">
+          <div class="image-container">
+            <img src="/AssetLanding/Jury/3.jpg" alt="Jury 3" />
+          </div>
+          <h3>SideEyeMeng</h3>
+          <p>Software Developer IkanFish</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-container">
+        <h2 class="section-title">What Is Hackathon?</h2>
+        <p>
+          Hackathon is the peak event of TechnoScape that forms a 36-hour coding
+          competition. It challenges participants to create innovative
+          applications or websites to solve real-world problems. Participants
+          will have the opportunity to get insights from mentors in the
+          business, technology, and design mentoring sessions.
+        </p>
+        <!-- dummy aja -->
+        <a href="dummy.pdf" class="download-button" download
+          >Download Guidebook</a
+        >
+      </div>
+    </section>
+
+    <!-- prizes-->
+    <section id="prizes">
+      <h2 class="section-title">Top 3 Prizes</h2>
+      <div class="prizes-container">
+        <!-- sudah berusaha yang terbaik <img
+          src="/AssetLanding/Juara/podium.png"
+          alt="Podium"
+          class="podium-image"
+        /> -->
+        <div class="prize-card">
+          <img src="/AssetLanding/Juara/2.png" alt="2nd Prize" />
+        </div>
+        <div class="prize-card">
+          <img src="/AssetLanding/Juara/1.png" alt="1st Prize" />
+        </div>
+        <div class="prize-card">
+          <img src="/AssetLanding//Juara/3.png" alt="3rd Prize" />
+        </div>
+      </div>
+    </section>
+
+    <!-- why join-->
+    <section id="why-join">
+      <h2 class="section-title">Why Join the Hackathon?</h2>
+      <div class="benefits-container">
+        <div class="benefit">
+          <img src="/AssetLanding/WhyJoin/Skill.jpg" alt="Benefit 1" />
+          <h3>Pengembangan Skill</h3>
+          <p>
+            Dengan semua fasilitas yang ditawarkan oleh Hackathon, peserta akan
+            memiliki kesempatan untuk mengembangkan keterampilan mereka dengan
+            sesi mentoring. Selain itu, mereka harus membuat produk inovatif
+            berdasarkan kasus tertentu.
+          </p>
+        </div>
+        <div class="benefit">
+          <img src="/AssetLanding/WhyJoin/Network.jpg" alt="Benefit 2" />
+          <h3>Networking</h3>
+          <p>
+            Hackathon ini memberikan peluang untuk bertemu dan berkolaborasi
+            dengan individu berbakat dari berbagai bidang. Peserta dapat
+            membangun jaringan dengan sesama peserta, mentor, dan bahkan peluang
+            bertemu investor atau perusahaan.
+          </p>
+        </div>
+        <div class="benefit">
+          <img src="/AssetLanding/WhyJoin/Hadiah.jpg" alt="Benefit 3" />
+          <h3>Hadiah</h3>
+          <p>
+            Selain pengalaman berharga, peserta juga akan berkompetisi untuk
+            memenangkan hadiah menarik, seperti uang tunai, sertifikat, dan
+            merchandise menarik lainnya.
+          </p>
+        </div>
+        <div class="benefit">
+          <img src="/AssetLanding/WhyJoin/Portofolio.jpg" alt="Benefit 4" />
+          <h3>Portofolio</h3>
+          <p>
+            Setelah mengikuti Hackathon, peserta akan memiliki produk nyata yang
+            dapat mereka tambahkan ke portofolio mereka. Ini menunjukkan
+            kemampuan mereka dalam menciptakan solusi inovatif di bawah tekanan
+            waktu.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>Apa saja persyaratan untuk berpartisipasi di Hackathon?</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Peserta hanya dapat bergabung dalam 1 tim, baik secara individu
+              maupun tim (setiap tim dapat beranggotakan maksimal 4 orang).<br />
+              Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun
+              untuk memenuhi syarat.<br />
+              Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan
+              Hackathon 7.0 (<a href="dummybukupanduan.html"
+                >Link Guidebook Hackathon 7.0</a
+              >)<br />
+              Peserta harus menyerahkan dokumen yang dibutuhkan pada halaman
+              pendaftaran Hackathon, seperti:<br />
+              1. CV (Curriculum Vitae)<br />
+              2. Portfolio (tidak wajib)<br />
+              3. Non-Binusian: KTP (KTP/SIM/dll)<br />
+              4. Binusian: Kartu Binusian (Kartu Flazz)
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>Apakah Hackathon gratis?</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Hackathon 7.0 adalah acara berbayar. Setiap tim harus melakukan
+              pembayaran sesuai periode:<br />
+              1. Early Bird (30 Mei - 3 Juni 2024)<br />
+              Binusian: Rp. 190.000<br />
+              Non-Binusian: Rp. 210.000<br />
+              2. Harga Biasa (4 Juni - 11 Juni 2024)<br />
+              Binusian: Rp. 200.000<br />
+              Non-Binusian: Rp. 225.000
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>Kapan batas waktu pendaftaran?</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Batas waktu pendaftaran adalah 13 Juni 2025. Pastikan untuk
+              mendaftar sebelum batas waktu!
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>Apa saja fasilitas yang disediakan?</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Fasilitas yang disediakan termasuk Hardware & Software. Kami
+              berusaha untuk menyediakan lingkungan yang mendukung bagi semua
+              peserta.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>Apa tema atau kasus yang akan diberikan?</p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Tema atau kasus akan diumumkan pada 13 Juni 2025. Nantikan
+              informasi lebih lanjut di @technoscapebncc.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <p>
+              Apa yang terjadi jika saya tidak menyelesaikan proyek tepat waktu?
+            </p>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Anda akan didiskualifikasi dan dipaksa berhenti.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- timeline -->
+    <section id="timeline">
+      <h2 class="section-title">Timeline</h2>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h3>Open Registration</h3>
+            <p>30 Mei 2025</p>
+          </div>
+          <!-- sudah diusahakan sebaik mungkin di dots nya-->
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Close Registration</h3>
+            <p>11 Juni 2025</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-content">
+            <h3>Technical Meeting</h3>
+            <p>13 Juni 2025</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Competition Day</h3>
+            <p>20 Juni 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsor -->
+    <section id="sponsors">
+      <h2 class="section-title">Sponsors</h2>
+      <div class="sponsors-container">
+        <div class="sponsor-category">
+          <h3>Platinum</h3>
+          <div class="sponsor-logos platinum">
+            <img
+              src="/AssetLanding/LogoSponsor/Plat1.jpg"
+              alt="Platinum Sponsor 1"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Plat2.jpg"
+              alt="Platinum Sponsor 2"
+            />
+          </div>
+        </div>
+
+        <div class="sponsor-category">
+          <h3>Gold</h3>
+          <div class="sponsor-logos gold">
+            <img
+              src="/AssetLanding/LogoSponsor/Gold1.jpg"
+              alt="Gold Sponsor 1"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Gold2.jpg"
+              alt="Gold Sponsor 2"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Gold3.jpg"
+              alt="Gold Sponsor 3"
+            />
+          </div>
+        </div>
+
+        <div class="sponsor-category">
+          <h3>Silver</h3>
+          <div class="sponsor-logos silver">
+            <img
+              src="/AssetLanding/LogoSponsor/Silver1.jpg"
+              alt="Silver Sponsor 1"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Silver2.jpg"
+              alt="Silver Sponsor 2"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Silver3.jpg"
+              alt="Silver Sponsor 3"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Silver4.jpg"
+              alt="Silver Sponsor 4"
+            />
+            <img
+              src="/AssetLanding/LogoSponsor/Silver5.jpg"
+              alt="Silver Sponsor 5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medpar -->
+    <section id="media-partners">
+      <h2 class="section-title">Media Partners</h2>
+      <div class="media-partners-container">
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/1.png" alt="Media Partner 1" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/2.png" alt="Media Partner 2" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/3.png" alt="Media Partner 3" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/4.png" alt="Media Partner 4" />
+        </div>
+
+        <!-- duplikat -->
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/1.png" alt="Media Partner 1" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/2.png" alt="Media Partner 2" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/3.png" alt="Media Partner 3" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/4.png" alt="Media Partner 4" />
+        </div>
+
+        <!-- lagi -->
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/1.png" alt="Media Partner 1" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/2.png" alt="Media Partner 2" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/3.png" alt="Media Partner 3" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/4.png" alt="Media Partner 4" />
+        </div>
+
+        <!-- LAGIII -->
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/1.png" alt="Media Partner 1" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/2.png" alt="Media Partner 2" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/3.png" alt="Media Partner 3" />
+        </div>
+        <div class="media-partner-logo">
+          <img src="/AssetLanding/LogoMedpar/4.png" alt="Media Partner 4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- contact us -->
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-container">
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="text" id="subject" placeholder="Subject" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div id="confirmation-message" style="display: none">
+          <p>Terimakasih karena telah mendaftar pada TechnoScape!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- sosmed -->
+    <section id="social-media">
+      <h2 class="section-title">Social Media</h2>
+      <div class="social-media-container">
+        <a href="https://www.instagram.com/technoscapebncc/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://x.com/BNCC_Binus" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/bina.nusantara.computer.club"
+          target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.linkedin.com/company/bnccbinus/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:technoscape@bncc.net"
+          ><i class="far fa-envelope"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <p>Powered and organized by BNCC</p>
+        <div class="footer-links">
+          <a href="/Privacy Policy/PrivacyPolicy.html">Privacy Policy</a>
+          <a href="/Terms of Service/TermsofService.html">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scriptLandingPage.js"></script>
+  </body>
+</html>
